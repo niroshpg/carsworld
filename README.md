@@ -18,10 +18,10 @@ npm run build
 npm start
 
 
-How to remove running instances[Mac OS X]:
+How to remove running instances [Mac OS X]:
 ------------------------------------------
-#find processors on any of 30xx
+- find processors on any of 30xx  
 netstat -vanp tcp | grep 30
 
-#Use PID  from above
+- Use PID  from above  
 kill -9 <PID>
