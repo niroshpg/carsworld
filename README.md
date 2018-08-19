@@ -5,16 +5,16 @@ How to run:
 For test this code in development environment where server and and the front-end
 is served in different ports need to handle CORS at server side or disable it in
 web browser.
+- clone src and install dependencies:  
+ git clone https://github.com/niroshpg/carsworld.git  
+ cd carsworld  
+ npm install  
 
-git clone https://github.com/niroshpg/carsworld.git
-cd carsworld
-npm install
-
-#uncomment src/server/app.ts CORS function
+- #uncomment src/server/app.ts CORS function
 
 npm run build
 
-#open another terminal and change directory to same above src
+- #open another terminal and change directory to same above src
 npm start
 
 
