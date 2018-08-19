@@ -1,5 +1,5 @@
 # carsworld
-Front-end React application written in TypeScript to demostrate how to consume NodeJS backend service
+Front-end React application written in TypeScript to demonstrate how to consume NodeJS backend service
 
 How to run:
 ----------
