@@ -8,7 +8,7 @@ export class CarController {
     }
 
     public static getByMakeName(req: Request, res: Response) {
-        // TODO: Please return all cars for the provided make, sorted by price
-        res.send('This has not been implemented yet');
+      const cars = CarService.getByMakeName(req.params.makeName)
+      res.send(cars);
     }
 }

@@ -50,4 +50,12 @@ export class CarService {
     public static getAll() {
         return this.cars;
     }
+
+    public static getByMakeName(makeNameParam:string) {
+      return this.cars.filter((car)=>{
+        return (car.makeName.toUpperCase() == makeNameParam.toUpperCase())
+      }).sort((a,b) => {
+        return (a.price - b.price)
+      });
+    }
 }

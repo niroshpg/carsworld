@@ -22,6 +22,8 @@ h1 span {
 }
 
 .content {
+  display: flex;
+  flex-direction: column;
   max-width: 800px;
   margin: auto;
   padding: 0 30px;
@@ -31,10 +33,42 @@ h2 {
   margin-top: 0;
 }
 
+.car {
+  flex: 1 1 auto;
+  border: 1px solid #010101;
+  border-radius: 5px;
+  padding: 0 5px;
+  margin: 5px;
+  background: white;
+}
+
+.car span{
+  display: block;
+  margin: 3px;
+  padding: 1px;
+  border: 1px solid #602121;
+  border-radius: 3px;
+  float: right;
+  background-color: #602121;
+  color: white;
+}
+.car-list-container {
+  flex: 3 1 auto;
+  background: white;
+}
+
+.car-list {
+  display: flex;
+  flex-flow: row wrap;
+  background: white;
+}
+
 .make-list {
+  flex: 1 1 auto;
   border: 1px solid #333;
   border-radius: 5px;
   padding: 0 5px;
+  margin: 5px;
   background: #eee;
 }
 
@@ -48,4 +82,26 @@ h2 {
 
 .make-list a:last-child {
   border-bottom: none;
+}
+
+@media (min-width: 768px) {
+  .content {
+    flex-direction: row;
+    flex: 1;
+    align-items: flex-start;
+  }
+  .car-list {
+    flex-flow: row wrap;
+    flex: 3 1 auto;
+  }
+
+  .car {
+    min-width: 200px;
+    max-width: 200px;
+  }
+
+  .make-list {
+    min-width: 200px;
+    max-width: 200px;
+  }
 }
