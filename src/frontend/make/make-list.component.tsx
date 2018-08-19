@@ -8,8 +8,8 @@ interface ComponentState {
 }
 
 export class MakeListComponent extends React.Component<{}, ComponentState> {
-    constructor() {
-        super({});
+    constructor(props: any) {
+        super(props);
 
         this.state = {
             makes: [],
@@ -28,7 +28,7 @@ export class MakeListComponent extends React.Component<{}, ComponentState> {
 
         return (
             <div className='make-list'>
-                {this.state.makes.map((make) => <MakeComponent make={make}/>)}
+                {this.state.makes.map((make) => <MakeComponent make={make} key={make.id}/>)}
             </div>
         );
     }

@@ -29,7 +29,7 @@ export class CarListComponent extends React.Component<RouteComponentProps<CarLis
         <div className='car-list-container'>
           <h2>{this.props.match.params.makeName.toUpperCase()}</h2>
           <div className='car-list'>
-              {this.state.cars.map((car) => <CarComponent car={car}/>)}
+              {this.state.cars.map((car) => <CarComponent car={car} key={car.id}/>)}
           </div>
         </div>
       );
